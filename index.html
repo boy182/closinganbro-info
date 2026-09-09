@@ -28,6 +28,14 @@
   </style>
 </head>
 <body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-emerald-500 selection:text-white pb-20 lg:pb-0">
+        <!-- TOP BAR PROMO COUNTDOWN VOUCHER 49RB -->
+<div class="bg-gradient-to-r from-emerald-600 to-teal-700 text-white text-xs font-semibold py-2.5 px-4 text-center flex flex-wrap items-center justify-center gap-2 shadow-lg sticky top-0 z-50">
+  <span>🔥 <b>FLASH SALE:</b> Klaim Voucher Diskon Bulanan Cuma <b>Rp49rb</b> <span class="line-through text-teal-200">Rp79rb</span>! Sisa waktu:</span>
+  <span id="countdown-timer" class="bg-slate-900 text-emerald-400 font-mono font-bold px-2 py-0.5 rounded border border-emerald-400/40 tracking-wider">00j 00m 00s</span>
+  <a href="https://wa.me/6281290137034?text=Halo%20Admin,%20saya%20mau%20klaim%20Voucher%20Flash%20Sale%20Lisensi%20Bulanan%2049rb" target="_blank" class="bg-slate-900 hover:bg-slate-800 text-emerald-400 px-2.5 py-1 rounded-lg text-[11px] font-bold transition ml-1">
+    Klaim Voucher Rp49rb &rarr;
+  </a>
+</div>
 
   <!-- NAVBAR / HEADER BRAND -->
   <nav class="max-w-6xl mx-auto w-full px-4 pt-6 flex justify-between items-center">
@@ -322,6 +330,42 @@
 
     // Initial Hitung
     hitungKPRMini();
+          
+
+  // SCRIPT COUNTDOWN TIMER PROMO 3 HARI
+  function startPromoTimer() {
+    const STORAGE_KEY = 'closinganbro_promo_endtime';
+    let endTime = localStorage.getItem(STORAGE_KEY);
+
+    if (!endTime || new Date().getTime() > parseInt(endTime)) {
+      endTime = new Date().getTime() + (3 * 24 * 60 * 60 * 1000);
+      localStorage.setItem(STORAGE_KEY, endTime);
+    }
+
+    function updateTimer() {
+      const now = new Date().getTime();
+      const diff = parseInt(endTime) - now;
+
+      if (diff <= 0) {
+        document.getElementById("countdown-timer").innerText = "PROMO BERAKHIR";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + (days * 24);
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown-timer").innerText = 
+        `${String(hours).padStart(2, '0')}j ${String(minutes).padStart(2, '0')}m ${String(seconds).padStart(2, '0')}s`;
+    }
+
+    updateTimer();
+    setInterval(updateTimer, 1000);
+  }
+
+  startPromoTimer();
+
   </script>
 
         <!-- VERCEL WEB ANALYTICS -->
