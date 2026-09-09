@@ -89,8 +89,8 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
         <div>
           <label class="block text-xs font-medium text-slate-300 mb-1">Harga Properti (Rp)</label>
-          <input type="number" id="harga-properti" value="500000000" step="10000000"
-                 class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-sm text-emerald-400 font-bold focus:outline-none focus:border-emerald-500">
+          <input type="text" id="harga-properti" value="500.000.000"
+       class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-sm text-emerald-400 font-bold focus:outline-none focus:border-emerald-500">
         </div>
         <div>
           <label class="block text-xs font-medium text-slate-300 mb-1">Uang Muka / DP (%)</label>
@@ -263,15 +263,33 @@
     </a>
   </div>
 
-  <!-- SCRIPT SIMULASI KPR LIVE -->
+<!-- SCRIPT SIMULASI KPR LIVE + FORMAT RIBUAN -->
   <script>
+    const hargaInput = document.getElementById('harga-properti');
+
+    // Fungsi format angka ke format rupiah (pake titik)
+    function formatRibuan(val) {
+      const raw = val.replace(/\D/g, '');
+      if (!raw) return '';
+      return new Intl.NumberFormat('id-ID').format(raw);
+    }
+
+    // Auto format pas user ngetik nominal
+    hargaInput.addEventListener('input', (e) => {
+      const formatted = formatRibuan(e.target.value);
+      e.target.value = formatted;
+      hitungKPRMini();
+    });
+
     function hitungKPRMini() {
-      const harga = parseFloat(document.getElementById('harga-properti').value) || 0;
+      // Ambil angka murni tanpa titik
+      const rawHarga = hargaInput.value.replace(/\D/g, '');
+      const harga = parseFloat(rawHarga) || 0;
       const dpPersen = parseFloat(document.getElementById('dp-persen').value) || 0;
       const tenorTahun = parseInt(document.getElementById('tenor-tahun').value) || 15;
       
       const pokokPinjaman = harga - (harga * (dpPersen / 100));
-      const sukuBungaTahun = 0.075; // 7.5% per tahun
+      const sukuBungaTahun = 0.075; // Bunga 7.5% per tahun
       const bungaBulan = sukuBungaTahun / 12;
       const totalBulan = tenorTahun * 12;
 
@@ -280,17 +298,13 @@
         cicilanPerBulan = (pokokPinjaman * bungaBulan) / (1 - Math.pow(1 + bungaBulan, -totalBulan));
       }
 
-      const formatted = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(cicilanPerBulan);
-      document.getElementById('hasil-cicilan').innerText = formatted;
+      const formattedCicilan = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(cicilanPerBulan);
+      document.getElementById('hasil-cicilan').innerText = formattedCicilan;
     }
 
-    document.getElementById('harga-properti').addEventListener('input', hitungKPRMini);
     document.getElementById('dp-persen').addEventListener('input', hitungKPRMini);
     document.getElementById('tenor-tahun').addEventListener('change', hitungKPRMini);
 
     // Initial Hitung
     hitungKPRMini();
   </script>
-
-</body>
-</html>
