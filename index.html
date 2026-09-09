@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<html lang="id">
+        <!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Closingan Bro - Aplikasi CRM Sales Properti & Otomotif</title>
+  <title>Closingan Bro - CRM & Kalkulator KPR Sales Properti & Otomotif</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Font: Inter -->
@@ -12,7 +12,7 @@
     body { font-family: 'Inter', sans-serif; }
   </style>
 </head>
-<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-emerald-500 selection:text-white">
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-emerald-500 selection:text-white pb-20 lg:pb-0">
 
   <!-- NAVBAR / HEADER BRAND -->
   <nav class="max-w-6xl mx-auto w-full px-4 pt-6 flex justify-between items-center">
@@ -45,18 +45,10 @@
 
       <!-- POINT HIGHLIGHT -->
       <div class="grid grid-cols-2 gap-2 text-xs text-slate-300 pt-2 max-w-md mx-auto lg:mx-0 text-left">
-        <div class="flex items-center gap-2">
-          <span class="text-emerald-400">✓</span> Tanpa Install Play Store
-        </div>
-        <div class="flex items-center gap-2">
-          <span class="text-emerald-400">✓</span> Hitung KPR / Simulasi Kredit
-        </div>
-        <div class="flex items-center gap-2">
-          <span class="text-emerald-400">✓</span> Simpan Leads & CSV/Excel
-        </div>
-        <div class="flex items-center gap-2">
-          <span class="text-emerald-400">✓</span> Bebas Pakai & Ringan
-        </div>
+        <div class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Tanpa Install Play Store</div>
+        <div class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Hitung KPR / Simulasi Kredit</div>
+        <div class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Simpan Leads & CSV/Excel</div>
+        <div class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Bebas Pakai & Ringan</div>
       </div>
 
       <!-- ACTION BUTTONS -->
@@ -65,14 +57,14 @@
            class="px-6 py-3.5 text-center text-sm font-bold rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 shadow-lg shadow-emerald-500/20 transition transform active:scale-95">
           Coba Gratis Sekarang
         </a>
-        <a href="#pricing" 
+        <a href="#simulasi-kpr" 
            class="px-6 py-3.5 text-center text-sm font-semibold rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition">
-          Lihat Paket Lisensi
+          🧮 Coba Simulasi KPR
         </a>
       </div>
     </div>
 
-    <!-- SISI KANAN: BANNER VISUAL (GAMBAR BARU 1:1) -->
+    <!-- SISI KANAN: BANNER VISUAL (GAMBAR 1:1) -->
     <div class="lg:col-span-6 flex justify-center w-full my-4 lg:my-0">
       <div class="relative w-full max-w-sm sm:max-w-md rounded-2xl overflow-hidden border border-slate-700/80 shadow-2xl shadow-emerald-950/50 bg-slate-800">
         <img src="file_00000000c93481fab6334976d7387c22.png" 
@@ -81,6 +73,53 @@
       </div>
     </div>
 
+  </section>
+
+  <!-- LIVE DEMO INTERAKTIF: SIMULASI KPR MINI -->
+  <section id="simulasi-kpr" class="max-w-4xl mx-auto px-4 py-10 w-full">
+    <div class="bg-gradient-to-b from-slate-800 to-slate-800/90 border border-slate-700 rounded-3xl p-6 sm:p-8 shadow-2xl">
+      <div class="text-center mb-6">
+        <span class="bg-emerald-500/10 text-emerald-400 text-xs font-semibold px-3 py-1 rounded-full border border-emerald-500/20">
+          Live Test Drive Fitur
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-2">Kalkulator KPR Fast-Check 🧮</h2>
+        <p class="text-slate-400 text-xs sm:text-sm mt-1">Coba langsung simulasi angsuran KPR simpel di bawah ini!</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <div>
+          <label class="block text-xs font-medium text-slate-300 mb-1">Harga Properti (Rp)</label>
+          <input type="number" id="harga-properti" value="500000000" step="10000000"
+                 class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-sm text-emerald-400 font-bold focus:outline-none focus:border-emerald-500">
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-slate-300 mb-1">Uang Muka / DP (%)</label>
+          <input type="number" id="dp-persen" value="10" step="1"
+                 class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-sm text-white font-bold focus:outline-none focus:border-emerald-500">
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-slate-300 mb-1">Tenor (Tahun)</label>
+          <select id="tenor-tahun" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-sm text-white font-bold focus:outline-none focus:border-emerald-500">
+            <option value="10">10 Tahun</option>
+            <option value="15" selected>15 Tahun</option>
+            <option value="20">20 Tahun</option>
+            <option value="25">25 Tahun</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- HASIL CALCULATOR -->
+      <div class="bg-slate-900/90 rounded-2xl p-4 border border-emerald-500/30 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+        <div>
+          <p class="text-xs text-slate-400">Estimasi Cicilan per Bulan (Bunga 7.5%):</p>
+          <p id="hasil-cicilan" class="text-2xl sm:text-3xl font-extrabold text-emerald-400">Rp0</p>
+        </div>
+        <a href="https://closinganbro.vercel.app" target="_blank"
+           class="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs rounded-xl shadow-md transition whitespace-nowrap">
+          Hitung Berjenjang di App 🚀
+        </a>
+      </div>
+    </div>
   </section>
 
   <!-- PRICING SECTION -->
@@ -165,13 +204,93 @@
     </div>
   </main>
 
-  <!-- FOOTER (RATA & RAPI) -->
-  <footer class="w-full border-t border-slate-800/80 py-8 px-4 text-center mt-12">
+  <!-- FAQ ACCORDION SECTION -->
+  <section class="max-w-3xl mx-auto px-4 py-8 w-full border-t border-slate-800/80">
+    <div class="text-center mb-6">
+      <h2 class="text-xl sm:text-2xl font-bold text-white">Pertanyaan Sering Diajukan (FAQ) ❓</h2>
+    </div>
+    
+    <div class="space-y-3 text-xs sm:text-sm">
+      <details class="bg-slate-800/60 border border-slate-700/80 rounded-xl p-4 group cursor-pointer">
+        <summary class="font-bold text-slate-200 flex justify-between items-center list-none">
+          <span>Apakah perlu download di Play Store / App Store?</span>
+          <span class="text-emerald-400 group-open:rotate-180 transition transform">▼</span>
+        </summary>
+        <p class="text-slate-400 mt-3 leading-relaxed">
+          Tidak perlu! Closingan Bro berbasis PWA (Progressive Web App). Cukup buka dari Chrome/Safari di HP kamu, lalu pilih "Tambahkan ke Layar Utama" (Add to Home Screen). Ringan, hemat memori, dan fleksibel.
+        </p>
+      </details>
+
+      <details class="bg-slate-800/60 border border-slate-700/80 rounded-xl p-4 group cursor-pointer">
+        <summary class="font-bold text-slate-200 flex justify-between items-center list-none">
+          <span>Apakah data prospek & buyer saya aman?</span>
+          <span class="text-emerald-400 group-open:rotate-180 transition transform">▼</span>
+        </summary>
+        <p class="text-slate-400 mt-3 leading-relaxed">
+          Sangat aman! Semua data prospek tersimpan aman di akun kamu. Kamu juga bisa mengeksport rekap data leads kapan saja ke format CSV / Excel secara instan.
+        </p>
+      </details>
+
+      <details class="bg-slate-800/60 border border-slate-700/80 rounded-xl p-4 group cursor-pointer">
+        <summary class="font-bold text-slate-200 flex justify-between items-center list-none">
+          <span>Bagaimana cara aktivasi lisensi PRO?</span>
+          <span class="text-emerald-400 group-open:rotate-180 transition transform">▼</span>
+        </summary>
+        <p class="text-slate-400 mt-3 leading-relaxed">
+          Pilih paket lisensi Bulanan atau Tahunan di atas, lalu klik tombol Beli. Kamu akan terhubung otomatis ke WhatsApp Admin untuk proses aktivasi kilat (dibawah 5 menit).
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="w-full border-t border-slate-800/80 py-8 px-4 text-center mt-8">
     <p class="text-[11px] sm:text-xs text-slate-500 leading-normal max-w-xs mx-auto">
       &copy; 2026 Closingan Bro.<br>
       Powered by <span class="font-semibold text-slate-400">Hendyboy</span> • All Rights Reserved.
     </p>
   </footer>
+
+  <!-- FLOATING STICKY CTA BUTTON (KHUSUS MOBILE HP) -->
+  <div class="fixed bottom-0 left-0 right-0 p-3 bg-slate-900/95 border-t border-slate-800 backdrop-blur-md lg:hidden z-50 flex gap-2 justify-between items-center">
+    <a href="https://closinganbro.vercel.app" target="_blank" 
+       class="flex-1 py-3 text-center text-xs font-bold rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 shadow-lg shadow-emerald-500/20 active:scale-95 transition">
+      ⚡ Coba Gratis App
+    </a>
+    <a href="https://wa.me/6281290137034?text=Halo%20Admin,%20saya%20mau%20tanya%20lisensi%20Closingan%20Bro" target="_blank" 
+       class="px-4 py-3 text-center text-xs font-semibold rounded-xl bg-slate-800 hover:bg-slate-700 text-emerald-400 border border-emerald-500/30 transition">
+      💬 Chat WA
+    </a>
+  </div>
+
+  <!-- SCRIPT SIMULASI KPR LIVE -->
+  <script>
+    function hitungKPRMini() {
+      const harga = parseFloat(document.getElementById('harga-properti').value) || 0;
+      const dpPersen = parseFloat(document.getElementById('dp-persen').value) || 0;
+      const tenorTahun = parseInt(document.getElementById('tenor-tahun').value) || 15;
+      
+      const pokokPinjaman = harga - (harga * (dpPersen / 100));
+      const sukuBungaTahun = 0.075; // 7.5% per tahun
+      const bungaBulan = sukuBungaTahun / 12;
+      const totalBulan = tenorTahun * 12;
+
+      let cicilanPerBulan = 0;
+      if (pokokPinjaman > 0 && totalBulan > 0) {
+        cicilanPerBulan = (pokokPinjaman * bungaBulan) / (1 - Math.pow(1 + bungaBulan, -totalBulan));
+      }
+
+      const formatted = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(cicilanPerBulan);
+      document.getElementById('hasil-cicilan').innerText = formatted;
+    }
+
+    document.getElementById('harga-properti').addEventListener('input', hitungKPRMini);
+    document.getElementById('dp-persen').addEventListener('input', hitungKPRMini);
+    document.getElementById('tenor-tahun').addEventListener('change', hitungKPRMini);
+
+    // Initial Hitung
+    hitungKPRMini();
+  </script>
 
 </body>
 </html>
