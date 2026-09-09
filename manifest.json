@@ -1,0 +1,21 @@
+{
+  "name": "Closingan Bro",
+  "short_name": "ClosinganBro",
+  "description": "Aplikasi CRM & Kalkulator KPR Sales Properti & Otomotif",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#10b981",
+  "icons": [
+    {
+      "src": "file_00000000c93481fab6334976d7387c22.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "file_00000000c93481fab6334976d7387c22.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
