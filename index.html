@@ -4,30 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- SEO & Open Graph Meta Tags -->
   <title>Closingan Bro - CRM & Kalkulator KPR Sales Properti & Otomotif</title>
   <meta name="description" content="Aplikasi CRM & Kalkulator KPR khusus Sales Properti & Otomotif. Simpan data buyer, hitung simulasi KPR presisi standar bank, dan bagikan Sales Kit ke WA.">
   
-  <!-- Open Graph / WhatsApp Preview -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://closinganbro-info.vercel.app/">
   <meta property="og:title" content="Closingan Bro - CRM & Kalkulator KPR Sales Properti & Otomotif">
   <meta property="og:description" content="Simpan data buyer, hitung KPR berjenjang presisi standar bank, dan bagikan Sales Kit langsung ke WA. Coba Gratis Sekarang!">
   <meta property="og:image" content="https://closinganbro-info.vercel.app/file_00000000c93481fab6334976d7387c22.png">
 
-  <!-- PWA Manifest Link -->
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#020617">
 
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Font: Inter -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     body { font-family: 'Inter', sans-serif; }
     
-    /* Custom Glow Effects */
     .glow-emerald {
       box-shadow: 0 0 50px -10px rgba(16, 185, 129, 0.3);
     }
@@ -50,7 +44,7 @@
       animation: pulseGlow 3s infinite;
     }
 
-    /* CSS MARQUEE RUNNING TEXT CONTINUOUS */
+    /* MARQUEE RUNNING TEXT */
     @keyframes marquee {
       0% { transform: translateX(0%); }
       100% { transform: translateX(-50%); }
@@ -68,7 +62,7 @@
 
 <body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-emerald-500 selection:text-white pb-20 lg:pb-0 overflow-x-hidden relative">
 
-  <!-- BACKGROUND GLOW MESH EFFECT -->
+  <!-- BACKGROUND GLOW -->
   <div class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[500px] bg-gradient-to-b from-emerald-600/10 via-teal-500/5 to-transparent blur-3xl pointer-events-none -z-10"></div>
   <div class="fixed top-1/3 -right-40 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none -z-10 animate-pulse-glow"></div>
 
@@ -81,13 +75,13 @@
       </span>
       🔥 <b>FLASH SALE:</b> Voucher Diskon Bulanan Cuma <b>Rp49rb</b> <span class="line-through text-teal-200">Rp79rb</span>! Sisa waktu:
     </span>
-    <span id="countdown-timer" class="bg-slate-950 text-emerald-400 font-mono font-bold px-2.5 py-0.5 rounded-md border border-emerald-400/40 tracking-wider shadow-inner">00j 00m 00s</span>
+    <span id="countdown-timer" class="bg-slate-950 text-emerald-400 font-mono font-bold px-2.5 py-0.5 rounded-md border border-emerald-400/40 tracking-wider shadow-inner">--j --m --s</span>
     <a href="https://wa.me/6281290137034?text=Halo%20Admin,%20saya%20mau%20klaim%20Voucher%20Flash%20Sale%20Lisensi%20Bulanan%2049rb" target="_blank" class="bg-slate-950 hover:bg-slate-900 text-emerald-400 px-3 py-1 rounded-lg text-[11px] font-bold transition ml-1 border border-emerald-500/30 hover:scale-105 active:scale-95 shadow-md">
       Klaim Voucher Rp49rb &rarr;
     </a>
   </div>
 
-  <!-- NAVBAR / HEADER BRAND -->
+  <!-- NAVBAR -->
   <nav class="max-w-6xl mx-auto w-full px-4 pt-6 flex justify-between items-center z-10">
     <div class="flex items-center gap-2.5">
       <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center text-xl shadow-lg shadow-emerald-500/20">
@@ -104,10 +98,8 @@
     </a>
   </nav>
 
-  <!-- HERO SECTION WITH BANNER IMAGE -->
+  <!-- HERO SECTION -->
   <section class="max-w-6xl mx-auto px-4 pt-10 pb-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-    
-    <!-- SISI KIRI: COPYWRITING & CTA -->
     <div class="lg:col-span-7 text-center lg:text-left space-y-6">
       <div class="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold px-3.5 py-1.5 rounded-full shadow-inner">
         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
@@ -122,7 +114,6 @@
         Aplikasi CRM & Simulasi KPR Berjenjang khusus Sales Properti & Otomotif. Simpan data buyer, hitung angsuran presisi standar bank, dan bagikan Sales Kit langsung ke WhatsApp client dalam hitungan detik.
       </p>
 
-      <!-- POINT HIGHLIGHT BADGES -->
       <div class="grid grid-cols-2 sm:grid-cols-2 gap-2.5 text-xs text-slate-300 pt-2 max-w-md mx-auto lg:mx-0 text-left font-semibold">
         <div class="flex items-center gap-2 bg-slate-900/60 border border-slate-800 p-2.5 rounded-xl"><span class="text-emerald-400 font-extrabold">✓</span> Tanpa Memori HP Penuh</div>
         <div class="flex items-center gap-2 bg-slate-900/60 border border-slate-800 p-2.5 rounded-xl"><span class="text-emerald-400 font-extrabold">✓</span> Simulasi KPR Fixed & Floating</div>
@@ -130,7 +121,6 @@
         <div class="flex items-center gap-2 bg-slate-900/60 border border-slate-800 p-2.5 rounded-xl"><span class="text-emerald-400 font-extrabold">✓</span> Auto Draft WA 1-Click</div>
       </div>
 
-      <!-- ACTION BUTTONS -->
       <div class="pt-4 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
         <a href="https://closinganbro.web.id" target="_blank"
            class="px-8 py-4 text-center text-sm font-black rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-400 hover:from-emerald-400 hover:to-teal-300 text-slate-950 shadow-xl shadow-emerald-500/25 transition transform hover:-translate-y-0.5 active:scale-95">
@@ -143,7 +133,6 @@
       </div>
     </div>
 
-    <!-- SISI KANAN: BANNER VISUAL -->
     <div class="lg:col-span-5 flex justify-center w-full relative">
       <div class="absolute inset-0 bg-gradient-to-tr from-emerald-500/20 to-teal-400/20 rounded-3xl blur-2xl -z-10"></div>
       
@@ -152,7 +141,6 @@
              alt="Closingan Bro Showcase" 
              class="w-full h-auto aspect-square object-cover rounded-2xl">
         
-        <!-- FLOATING OVERLAY BADGE -->
         <div class="absolute bottom-6 left-6 right-6 bg-slate-950/90 backdrop-blur-md p-3.5 rounded-2xl border border-emerald-500/40 shadow-xl flex items-center justify-between animate-float">
           <div class="flex items-center gap-3">
             <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-lg">
@@ -167,10 +155,9 @@
         </div>
       </div>
     </div>
-
   </section>
 
-  <!-- LIVE RUNNING TEXT TICKER (FOMO SALES ACTIVATION ONLY) -->
+  <!-- LIVE RUNNING TEXT TICKER (FOMO SALES ACTIVATION) -->
   <div class="w-full bg-slate-900/90 border-y border-slate-800/80 py-3 overflow-hidden backdrop-blur-md relative flex items-center">
     <div class="pl-4 pr-3 z-10 bg-slate-900/90">
       <span class="bg-emerald-500/20 text-emerald-400 font-extrabold px-3 py-1 rounded-md border border-emerald-500/30 text-[10px] uppercase tracking-wider flex items-center gap-1.5 shadow">
@@ -178,11 +165,9 @@
       </span>
     </div>
 
-    <!-- TEXT BERJALAN MUTAR TANPA HENTI -->
     <div class="overflow-hidden w-full">
       <div class="animate-marquee text-xs font-semibold text-slate-300 gap-8 items-center">
-        
-        <!-- BLOK 10 SALES -->
+        <!-- 10 SALES ACTIVATION LIST -->
         <span class="flex items-center gap-2 text-slate-300">⚡ <b>Budi</b> (Sales Ciputra Jakarta) baru saja aktivasi <b>Trial 7 Hari</b></span>
         <span class="text-slate-600">•</span>
         <span class="flex items-center gap-2 text-slate-300">🔥 <b>Anton</b> (Sales Honda Bandung) baru saja aktivasi <b>PRO 1 Bulan</b></span>
@@ -204,7 +189,7 @@
         <span class="flex items-center gap-2 text-slate-300">🚗 <b>Doni</b> (Sales Suzuki Palembang) baru saja aktivasi <b>PRO 1 Bulan</b></span>
         <span class="text-slate-600">•</span>
 
-        <!-- DUPLIKASI SEAMLESS -->
+        <!-- DUPLIKASI FOR INFINITE LOOP -->
         <span class="flex items-center gap-2 text-slate-300">⚡ <b>Budi</b> (Sales Ciputra Jakarta) baru saja aktivasi <b>Trial 7 Hari</b></span>
         <span class="text-slate-600">•</span>
         <span class="flex items-center gap-2 text-slate-300">🔥 <b>Anton</b> (Sales Honda Bandung) baru saja aktivasi <b>PRO 1 Bulan</b></span>
@@ -225,7 +210,6 @@
         <span class="text-slate-600">•</span>
         <span class="flex items-center gap-2 text-slate-300">🚗 <b>Doni</b> (Sales Suzuki Palembang) baru saja aktivasi <b>PRO 1 Bulan</b></span>
         <span class="text-slate-600">•</span>
-
       </div>
     </div>
   </div>
@@ -245,10 +229,10 @@
       <div class="mb-5 space-y-2">
         <label class="block text-[11px] font-bold text-slate-400 uppercase tracking-wider">Pilih Nominal Cepat (Preset):</label>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-          <button type="button" onclick="window.setHargaPreset(300000000)" class="py-2.5 px-3 bg-slate-800/80 hover:bg-emerald-500/20 text-emerald-400 font-bold text-xs rounded-xl border border-slate-700 hover:border-emerald-500 transition active:scale-95">Rp 300 Juta</button>
-          <button type="button" onclick="window.setHargaPreset(500000000)" class="py-2.5 px-3 bg-slate-800/80 hover:bg-emerald-500/20 text-emerald-400 font-bold text-xs rounded-xl border border-slate-700 hover:border-emerald-500 transition active:scale-95">Rp 500 Juta</button>
-          <button type="button" onclick="window.setHargaPreset(1000000000)" class="py-2.5 px-3 bg-slate-800/80 hover:bg-emerald-500/20 text-emerald-400 font-bold text-xs rounded-xl border border-slate-700 hover:border-emerald-500 transition active:scale-95">Rp 1 Miliar</button>
-          <button type="button" onclick="window.setHargaPreset(2000000000)" class="py-2.5 px-3 bg-slate-800/80 hover:bg-emerald-500/20 text-emerald-400 font-bold text-xs rounded-xl border border-slate-700 hover:border-emerald-500 transition active:scale-95">Rp 2 Miliar</button>
+          <button type="button" onclick="setHargaPreset(300000000)" class="py-2.5 px-3 bg-slate-800/80 hover:bg-emerald-500/20 text-emerald-400 font-bold text-xs rounded-xl border border-slate-700 hover:border-emerald-500 transition active:scale-95">Rp 300 Juta</button>
+          <button type="button" onclick="setHargaPreset(500000000)" class="py-2.5 px-3 bg-slate-800/80 hover:bg-emerald-500/20 text-emerald-400 font-bold text-xs rounded-xl border border-slate-700 hover:border-emerald-500 transition active:scale-95">Rp 500 Juta</button>
+          <button type="button" onclick="setHargaPreset(1000000000)" class="py-2.5 px-3 bg-slate-800/80 hover:bg-emerald-500/20 text-emerald-400 font-bold text-xs rounded-xl border border-slate-700 hover:border-emerald-500 transition active:scale-95">Rp 1 Miliar</button>
+          <button type="button" onclick="setHargaPreset(2000000000)" class="py-2.5 px-3 bg-slate-800/80 hover:bg-emerald-500/20 text-emerald-400 font-bold text-xs rounded-xl border border-slate-700 hover:border-emerald-500 transition active:scale-95">Rp 2 Miliar</button>
         </div>
       </div>
 
@@ -261,9 +245,9 @@
         <div>
           <label class="block text-xs font-bold text-slate-300 mb-1.5">Uang Muka / DP (%)</label>
           <div class="flex gap-1.5 mb-1.5">
-            <button type="button" onclick="window.setDpPreset(0)" class="flex-1 py-1 bg-slate-800 text-[10px] font-bold rounded-lg text-slate-300 hover:bg-emerald-500 hover:text-slate-950 transition">0%</button>
-            <button type="button" onclick="window.setDpPreset(10)" class="flex-1 py-1 bg-slate-800 text-[10px] font-bold rounded-lg text-slate-300 hover:bg-emerald-500 hover:text-slate-950 transition">10%</button>
-            <button type="button" onclick="window.setDpPreset(20)" class="flex-1 py-1 bg-slate-800 text-[10px] font-bold rounded-lg text-slate-300 hover:bg-emerald-500 hover:text-slate-950 transition">20%</button>
+            <button type="button" onclick="setDpPreset(0)" class="flex-1 py-1 bg-slate-800 text-[10px] font-bold rounded-lg text-slate-300 hover:bg-emerald-500 hover:text-slate-950 transition">0%</button>
+            <button type="button" onclick="setDpPreset(10)" class="flex-1 py-1 bg-slate-800 text-[10px] font-bold rounded-lg text-slate-300 hover:bg-emerald-500 hover:text-slate-950 transition">10%</button>
+            <button type="button" onclick="setDpPreset(20)" class="flex-1 py-1 bg-slate-800 text-[10px] font-bold rounded-lg text-slate-300 hover:bg-emerald-500 hover:text-slate-950 transition">20%</button>
           </div>
           <input type="number" id="dp-persen" value="10" step="1"
                  class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white font-bold focus:outline-none focus:border-emerald-500 shadow-inner">
@@ -293,7 +277,7 @@
     </div>
   </section>
 
-  <!-- FEATURE SHOWCASE SECTION (4 PILAR UNGGULAN) -->
+  <!-- FEATURE SHOWCASE SECTION -->
   <section class="max-w-6xl mx-auto px-4 py-12 w-full">
     <div class="text-center max-w-2xl mx-auto mb-12">
       <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight">4 Senjata Utama Sales Pro</h2>
@@ -303,9 +287,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 glow-card transition duration-300 flex flex-col justify-between">
         <div>
-          <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-2xl font-bold mb-4">
-            📊
-          </div>
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-2xl font-bold mb-4">📊</div>
           <h3 class="text-base font-bold text-white mb-2">Pipeline Leads Visual</h3>
           <p class="text-xs text-slate-400 leading-relaxed">Kelola prospek buyer dari Cold, Warm, Hot, sampai Closing. Anti lupa follow-up client!</p>
         </div>
@@ -313,9 +295,7 @@
 
       <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 glow-card transition duration-300 flex flex-col justify-between">
         <div>
-          <div class="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/30 text-teal-400 flex items-center justify-center text-2xl font-bold mb-4">
-            💬
-          </div>
+          <div class="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/30 text-teal-400 flex items-center justify-center text-2xl font-bold mb-4">💬</div>
           <h3 class="text-base font-bold text-white mb-2">Auto Draft WA 1-Click</h3>
           <p class="text-xs text-slate-400 leading-relaxed">Kirim simulasi KPR, brosur, dan sapaan promosi langsung ke WhatsApp buyer tanpa ngetik ulang.</p>
         </div>
@@ -323,9 +303,7 @@
 
       <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 glow-card transition duration-300 flex flex-col justify-between">
         <div>
-          <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center text-2xl font-bold mb-4">
-            🧮
-          </div>
+          <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center text-2xl font-bold mb-4">🧮</div>
           <h3 class="text-base font-bold text-white mb-2">KPR Berjenjang Presisi</h3>
           <p class="text-xs text-slate-400 leading-relaxed">Hitung skema suku bunga fixed & floating sesuai standar perhitungan bank nasional.</p>
         </div>
@@ -333,9 +311,7 @@
 
       <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 glow-card transition duration-300 flex flex-col justify-between">
         <div>
-          <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-2xl font-bold mb-4">
-            📑
-          </div>
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-2xl font-bold mb-4">📑</div>
           <h3 class="text-base font-bold text-white mb-2">Export Data & Sales Kit</h3>
           <p class="text-xs text-slate-400 leading-relaxed">Backup seluruh data buyer ke Excel/CSV atau cetak rekap simulasi PDF secara rapi.</p>
         </div>
@@ -467,7 +443,7 @@
     </p>
   </footer>
 
-  <!-- FLOATING STICKY CTA BUTTON (KHUSUS MOBILE HP) -->
+  <!-- FLOATING STICKY CTA BUTTON -->
   <div class="fixed bottom-0 left-0 right-0 p-3 bg-slate-950/95 border-t border-slate-800/80 backdrop-blur-md lg:hidden z-50 flex gap-2 justify-between items-center">
     <a href="https://closinganbro.web.id" target="_blank" 
        class="flex-1 py-3 text-center text-xs font-black rounded-xl bg-gradient-to-r from-emerald-500 to-teal-400 text-slate-950 shadow-lg shadow-emerald-500/20 active:scale-95 transition">
@@ -479,100 +455,122 @@
     </a>
   </div>
 
-  <!-- SCRIPT UTAMA FIXED (STANDALONE TANPA JS EXTERNAL) -->
+  <!-- SCRIPT SULTAN ANTI-GAGAL (PURE VANILLA JS AT THE BOTTOM) -->
   <script>
-    function formatRibuan(val) {
-      if (val === undefined || val === null) return '';
-      const raw = val.toString().replace(/\D/g, '');
-      if (!raw) return '';
-      return new Intl.NumberFormat('id-ID').format(raw);
+    // 1. HELPER FORMAT & PARSE RUPIAH
+    function formatRupiah(num) {
+      if (!num && num !== 0) return '';
+      var str = Math.round(num).toString().replace(/\D/g, '');
+      if (!str) return '';
+      return new Intl.NumberFormat('id-ID').format(parseInt(str, 10));
     }
 
-    // Global Functions untuk onClick Preset HTML
+    function parseNominal(str) {
+      if (!str) return 0;
+      return parseFloat(str.toString().replace(/\D/g, '')) || 0;
+    }
+
+    // 2. FUNGSI HITUNG KPR
+    function hitungKPR() {
+      var hargaEl = document.getElementById('harga-properti');
+      var dpEl = document.getElementById('dp-persen');
+      var tenorEl = document.getElementById('tenor-tahun');
+      var hasilEl = document.getElementById('hasil-cicilan');
+
+      if (!hargaEl || !dpEl || !tenorEl || !hasilEl) return;
+
+      var harga = parseNominal(hargaEl.value);
+      var dpPersen = parseFloat(dpEl.value) || 0;
+      var tenorTahun = parseInt(tenorEl.value, 10) || 15;
+
+      var pokok = harga - (harga * (dpPersen / 100));
+      var bungaTahun = 0.075; // 7.5% Fixed
+      var bungaBulan = bungaTahun / 12;
+      var totalBulan = tenorTahun * 12;
+
+      var cicilan = 0;
+      if (pokok > 0 && totalBulan > 0) {
+        cicilan = (pokok * bungaBulan) / (1 - Math.pow(1 + bungaBulan, -totalBulan));
+      }
+
+      hasilEl.innerText = 'Rp ' + formatRupiah(cicilan);
+    }
+
+    // 3. GLOBAL PRESET FUNCTIONS
     window.setHargaPreset = function(nominal) {
-      const input = document.getElementById('harga-properti');
-      if (input) {
-        input.value = formatRibuan(nominal);
-        window.hitungKPRMini();
+      var hargaEl = document.getElementById('harga-properti');
+      if (hargaEl) {
+        hargaEl.value = formatRupiah(nominal);
+        hitungKPR();
       }
     };
 
     window.setDpPreset = function(persen) {
-      const dpInput = document.getElementById('dp-persen');
-      if (dpInput) {
-        dpInput.value = persen;
-        window.hitungKPRMini();
+      var dpEl = document.getElementById('dp-persen');
+      if (dpEl) {
+        dpEl.value = persen;
+        hitungKPR();
       }
     };
 
-    window.hitungKPRMini = function() {
-      const hargaEl = document.getElementById('harga-properti');
-      const dpEl = document.getElementById('dp-persen');
-      const tenorEl = document.getElementById('tenor-tahun');
-      const hasilEl = document.getElementById('hasil-cicilan');
+    // 4. FLASH SALE TIMER (PURE FOOLPROOF TICK)
+    function initTimer() {
+      var timerEl = document.getElementById('countdown-timer');
+      if (!timerEl) return;
 
-      if (!hargaEl || !dpEl || !tenorEl || !hasilEl) return;
+      var now = new Date().getTime();
+      var storedEnd = localStorage.getItem('cb_flash_time_sultan');
+      var endTime = parseInt(storedEnd, 10);
 
-      const rawHarga = hargaEl.value.replace(/\D/g, '');
-      const harga = parseFloat(rawHarga) || 0;
-      const dpPersen = parseFloat(dpEl.value) || 0;
-      const tenorTahun = parseInt(tenorEl.value, 10) || 15;
-      
-      const pokokPinjaman = harga - (harga * (dpPersen / 100));
-      const sukuBungaTahun = 0.075; // Bunga 7.5%
-      const bungaBulan = sukuBungaTahun / 12;
-      const totalBulan = tenorTahun * 12;
-
-      let cicilanPerBulan = 0;
-      if (pokokPinjaman > 0 && totalBulan > 0) {
-        cicilanPerBulan = (pokokPinjaman * bungaBulan) / (1 - Math.pow(1 + bungaBulan, -totalBulan));
+      if (!endTime || isNaN(endTime) || now >= endTime) {
+        endTime = now + (2 * 24 * 3600 * 1000) + (14 * 3600 * 1000); // 2 Hari 14 Jam
+        try { localStorage.setItem('cb_flash_time_sultan', endTime.toString()); } catch(e) {}
       }
 
-      const formattedCicilan = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(cicilanPerBulan);
-      hasilEl.innerText = formattedCicilan;
-    };
-
-    // Countdown Promo Timer Fix
-    function startPromoTimer() {
-      const STORAGE_KEY = 'cb_promo_timer_clean';
-      let endTime = localStorage.getItem(STORAGE_KEY);
-      const now = new Date().getTime();
-
-      if (!endTime || isNaN(parseInt(endTime, 10)) || now > parseInt(endTime, 10)) {
-        endTime = now + (3 * 24 * 60 * 60 * 1000); // 3 Hari
-        localStorage.setItem(STORAGE_KEY, endTime.toString());
-      }
-
-      function updateTimer() {
-        const current = new Date().getTime();
-        const diff = parseInt(endTime, 10) - current;
-        const timerEl = document.getElementById("countdown-timer");
-
-        if (!timerEl) return;
+      function updateClock() {
+        var current = new Date().getTime();
+        var diff = endTime - current;
 
         if (diff <= 0) {
-          timerEl.innerText = "PROMO BERAKHIR";
+          timerEl.innerHTML = "00j 00m 00s";
           return;
         }
 
-        const hours = Math.floor(diff / (1000 * 60 * 60));
-        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        var h = Math.floor(diff / (1000 * 60 * 60));
+        var m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        var s = Math.floor((diff % (1000 * 60)) / 1000);
 
-        timerEl.innerText = `${String(hours).padStart(2, '0')}j ${String(minutes).padStart(2, '0')}m ${String(seconds).padStart(2, '0')}s`;
+        var hStr = h < 10 ? '0' + h : h;
+        var mStr = m < 10 ? '0' + m : m;
+        var sStr = s < 10 ? '0' + s : s;
+
+        timerEl.innerHTML = hStr + 'j ' + mStr + 'm ' + sStr + 's';
       }
 
-      updateTimer();
-      setInterval(updateTimer, 1000);
+      updateClock();
+      setInterval(updateClock, 1000);
     }
 
-    // Init saat DOM siap
-    document.addEventListener('DOMContentLoaded', function() {
-      const hargaEl = document.getElementById('harga-properti');
-      const dpEl = document.getElementById('dp-persen');
-      const tenorEl = document.getElementById('tenor-tahun');
+    // 5. ATTACH LISTENERS AFTER DOM LOAD
+    (function() {
+      var hargaEl = document.getElementById('harga-properti');
+      var dpEl = document.getElementById('dp-persen');
+      var tenorEl = document.getElementById('tenor-tahun');
 
       if (hargaEl) {
         hargaEl.addEventListener('input', function(e) {
-          e.target.value = formatRibuan(e.target.value);
-         
+          var raw = parseNominal(e.target.value);
+          e.target.value = formatRupiah(raw);
+          hitungKPR();
+        });
+      }
+      if (dpEl) dpEl.addEventListener('input', hitungKPR);
+      if (tenorEl) tenorEl.addEventListener('change', hitungKPR);
+
+      // Trigger awal
+      hitungKPR();
+      initTimer();
+    })();
+  </script>
+
+  <!-
